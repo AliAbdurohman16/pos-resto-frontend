@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCheckDouble, FaCircle } from "react-icons/fa";
+import { FaCheck, FaCircle } from "react-icons/fa";
 
 const OrderList = () => {
     return (
@@ -13,8 +13,8 @@ const OrderList = () => {
                 <div>
                     <h1 className="text-[#f6b100] font-semibold border border-[#f6b100] rounded-lg p-1">Table no : 3</h1>
                 </div>
-                <div className="flex flex-col items-start gap-2">
-                    <p className="text-green-600 px-4"><FaCheckDouble className="inline mr-2" /> Ready</p>
+                <div className="flex flex-col items-end gap-2">
+                    <p className="text-green-600 bg-[#2e4a40] px-2 py-1 rounded-lg"><FaCheck className="inline mr-2" /> Ready</p>
                     <p className="text-[#ababab] text-sm"><FaCircle className="inline mr-2 text-green-600" /> Ready to serve</p>
                 </div>
             </div>
