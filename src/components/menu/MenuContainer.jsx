@@ -70,7 +70,16 @@ const MenuContainer = () => {
                                     <button onClick={() => handleAddToCart(item)} className="bg-[#2e4a40] text-[#02ca3a] p-2 rounded-lg cursor-pointer"><FaShoppingCart size={20} /></button>
                                 </div>
                                 <div className="flex items-center justify-between w-full">
-                                    <p className="text-[#f5f5f5] text-xl font-bold">Rp {item.price}</p>
+                                    <p className="text-[#f5f5f5] text-xl font-bold">
+                                        {
+                                            item.price.toLocaleString('id-ID', { 
+                                                style: 'currency', 
+                                                currency: 'IDR',
+                                                minimumFractionDigits: 0,
+                                                maximumFractionDigits: 0
+                                            })
+                                        }
+                                    </p>
                                     <div className="flex items-center justify-between rounded-lg py-3 px-4 bg-[#1f1f1f] gap-3 z-20">
                                         <button onClick={() => decrement(item.id)} className="text-yellow-500 text-2xl">&minus;</button>
                                         <span className="text-white">{item.id === itemId ? itemCount : "0"}</span>
