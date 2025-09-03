@@ -14,3 +14,6 @@ export const login = (data) => api.post("/api/users/login", data);
 export const register = (data) => api.post("/api/users/register", data);
 export const getUserData = () => api.get("/api/users");
 export const logout = () => api.post("/api/users/logout");
+
+export const addTable = (data) => api.post("/api/table/", data);
+export const getTables = () => api.get("/api/table");
